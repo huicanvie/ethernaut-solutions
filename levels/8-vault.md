@@ -32,7 +32,7 @@ contract Vault {
 OK, 这个好办了，去查看下这个值就可以。就像去保安室直接去拿钥匙一样方便。
 
 ```solidity
-// 在这个题目的页面，打开浏览器调试工具，可以在console界面使用ethers.js的接口，查询password
+// 在这个题目的页面，打开浏览器调试工具，可以在console界面使用web3.js的接口，查询password
 let ps = await web3.eth.getStorageAt('0x342c16E73AbE644D065A2655a6C7BBc137662F82', 1);
 
 // 不要问我这个1是什么，这个就是存储槽的编号，看password的定义的顺序
