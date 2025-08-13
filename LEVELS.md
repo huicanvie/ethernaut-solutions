@@ -8,3 +8,4 @@
 | 4	| Telephone	      |[点此前往](levels/4-telephone.md)
 | 5	| Token   	      |[点此前往](levels/5-token.md)
 | 6	| Delegate   	    |[点此前往](levels/6-delegate.md)
+| 7	| Force      	    |[点此前往](levels/7-force.md)
