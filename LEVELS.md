@@ -7,3 +7,4 @@
 | 3	| CoinFlip	      |[点此前往](levels/3-coinFlip.md)
 | 4	| Telephone	      |[点此前往](levels/4-telephone.md)
 | 5	| Token   	      |[点此前往](levels/5-token.md)
+| 6	| Delegate   	    |[点此前往](levels/6-delegate.md)

@@ -20,7 +20,7 @@ Ethernaut 是由 OpenZeppelin 官方推出的一款以太坊智能合约安全�
 | 1	| Fallback	      |[点此前往](levels/1-fallback.md)
 | 2	| Fallout	        |[点此前往](levels/2-fallout.md)
 
-全部关卡列表见：LEVELS.md
+全部关卡列表见：[LEVELS.md](LEVELS.md)
 
 
 ## 扩展阅读
