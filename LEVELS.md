@@ -10,3 +10,4 @@
 | 6	| Delegate   	    |[点此前往](levels/6-delegate.md)
 | 7	| Force      	    |[点此前往](levels/7-force.md)
 | 8	| Vault      	    |[点此前往](levels/8-vault.md)
+| 9	| King      	    |[点此前往](levels/9-king.md)
