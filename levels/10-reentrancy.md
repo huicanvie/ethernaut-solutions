@@ -37,11 +37,17 @@ contract Reentrance {
 ```
 ### 分析
 这道题让我感觉偷感好重：）\
-其实这个在开发中是必须要注意的重入漏洞，算是防范的基本要求了。但是早期的时候，有的合约开发确实有一些疏忽，造成重要损失的也有。\
-我们主要看withdraw这个函数，首先是判断余额，然后使用call()转账，最后是更新余额。\
-这个步骤就出现了漏洞，如果msg.sender是个攻击合约的话，这个攻击合约在收到转账后，会执行fallback或者receive函数，又可以继续发起调用withdraw()，\
-因为“balances[msg.sender] -= _amount;”还没执行，所以余额始终还没变化，\
-“balances[msg.sender] >= _amount”每次都通过校验。这样就可以再次调用，把余额全部偷完。
+其实这个在开发中是必须要注意的重入漏洞，算是防范的基本要求了。\
+但是早期的时候，有的合约开发确实有一些疏忽，造成重要损失的也有。\
+我们主要看withdraw这个函数，首先是判断余额，\
+然后使用call()转账，最后是更新余额。\
+这个步骤就出现了漏洞，如果msg.sender是个攻击合约的话，\
+这个攻击合约在收到转账后，会执行fallback或者receive函数，\
+又可以继续发起调用withdraw()，\
+因为“balances[msg.sender] -= _amount;”还没执行，\
+所以余额始终还没变化，\
+“balances[msg.sender] >= _amount”每次都通过校验。\
+这样就可以再次调用，把余额全部偷完。
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.12;

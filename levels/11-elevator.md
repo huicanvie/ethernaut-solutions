@@ -26,12 +26,23 @@ contract Elevator {
 }
 ```
 ### 分析
-意思是我想到顶楼，但是电梯不让到顶楼。刚开始，整个懵逼。后来分析了下代码，才明白这个意思。到了顶楼，然后能把top值改为true。\
+意思是我想到顶楼，但是电梯不让到顶楼。\
+刚开始，整个懵逼。\
+后来分析了下代码，才明白这个意思。\
+到了顶楼，然后能把top值改为true。\
 进入条件是“!building.isLastFloor(_floor)”，只有不是顶楼才会修改top值。\
-如果到了顶楼，“building.isLastFloor(_floor) == true”,是没法修改top为true的。这个整个逻辑是互锁的。需要我们想策略使得top等于true。\
-如果building.isLastFloor(_floor)第一次调用是false，然后第二次调用是true，那就正好可以破解了。isLastFloor方法里需要做点技巧了。那就需要一个变量来控制输出。能够达到每次返回的结果和前一次结果相反。\
+如果到了顶楼，“building.isLastFloor(_floor) == true”,\
+是没法修改top为true的。这个整个逻辑是互锁的。\
+需要我们想策略使得top等于true。\
+如果building.isLastFloor(_floor)第一次调用是false，\
+然后第二次调用是true，那就正好可以破解了。\
+isLastFloor方法里需要做点技巧了。\
+那就需要一个变量来控制输出。\
+能够达到每次返回的结果和前一次结果相反。\
 有以下方案：\
-使用具名返回值，可以不需要return， 这个返回值等于一个状态变量值，可以在设置返回值后，再把这个状态变量改成相反的值，等待下一次函数的调用再使用
+使用具名返回值，可以不需要return， 这个返回值等于一个状态变量值，\
+可以在设置返回值后，再把这个状态变量改成相反的值，\
+等待下一次函数的调用再使用
 
 ```solidity
 // SPDX-License-Identifier: MIT
