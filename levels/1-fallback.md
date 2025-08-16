@@ -59,10 +59,10 @@ contract Fallback {
 
 ### 分析
 
-```
-首先要获得控制权，也就是owner要修改成我们自己的攻击合约地址。看源码有两处地方是 owner = msg.sender。那就先看这两处的逻辑是否有漏洞。
-首先
-```
+首先要获得控制权，也就是owner要修改成我们自己的攻击合约地址。\
+看源码有两处地方是 owner = msg.sender。\
+那就先看这两处的逻辑是否有漏洞。
+
 ```solidity
 function contribute() public payable {
   // 执行通过的条件是转账金额要小于 0.001 ether
@@ -84,10 +84,16 @@ receive() external payable {
   owner = msg.sender;
 }
 ```
-```
-receive这个函数的作用就是接收纯转账（transfer，send，call("")）等。为了满足contributions[msg.sender] > 0，我们先调用contribute(),转账金额小于0.001 ether，然后再进行一个纯转账操作token.call{value: 0.001 ether}(""),
-这样就满足了执行条件，执行owner = msg.sender，这样就拿到了所有权。所有权在手，执行withdraw()，合约的全部余额取现，这样合约的余额也被清空。以下是攻击代码，为了演示，请忽略细节。如果是在remix上测试，切记要对2个合约初始余额值，不然余额为0，无法完成攻击
-```
+receive这个函数的作用就是接收纯转账（transfer，send，call("")）等。\
+为了满足contributions[msg.sender] > 0，我们先调用contribute(),转账金额小于0.001 ether，\
+然后再进行一个纯转账操作token.call{value: 0.001 ether}(""),
+这样就满足了执行条件，\
+执行owner = msg.sender，这样就拿到了所有权。\
+所有权在手，执行withdraw()，合约的全部余额取现，这样合约的余额也被清空。\
+以下是攻击代码，为了演示，请忽略细节。\
+如果是在remix上测试，切记要对2个合约初始余额值，\
+不然余额为0，无法完成攻击
+
 ```solidity
 
 // SPDX-License-Identifier: MIT
