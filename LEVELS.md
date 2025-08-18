@@ -13,4 +13,5 @@
 | 9	| King      	    |[点此前往](levels/9-king.md)
 | 10| Reentrancy      |[点此前往](levels/10-reentrancy.md)
 | 11| Elevator        |[点此前往](levels/11-elevator.md)
-| 12| Privacy        |[点此前往](levels/12-Privacy.md)
+| 12| Privacy         |[点此前往](levels/12-Privacy.md)
+| 13| GatekeeperOne   |[点此前往](levels/13-GatekeeperOne.md)
