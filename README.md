@@ -22,13 +22,6 @@ Ethernaut 是由 OpenZeppelin 官方推出的一款以太坊智能合约安全�
 
 全部关卡列表见：[LEVELS.md](LEVELS.md)
 
-
-## 扩展阅读
-
-Ethernaut官方链接
-Solidity官方文档链接
-相关安全论文/社区文章
-
 ---
 
 ## 使用方法
