@@ -45,7 +45,7 @@ contract LibraryContract {
 ```
 ### 分析
 这道题的难度比之前的题目要高一颗星。\
-如果是对delegatecall的机制没有比较深的理解, 是很找到突破口的。\
+如果是对delegatecall的机制没有比较深的理解, 是很难找到突破口的。\
 delegatecall用目标合约的逻辑来操作自己的存储空间数据。\
 上面这句话听起来比较抽象，怎么又是操作自己的存储空间了，不是操作目标合约的空间吗?\
 EVM对于（定长， 非动态， 未跨槽打包）状态变量编译的计算结果是存储槽编号。\
@@ -99,6 +99,7 @@ contract PreservationAttack {
 在remix部署了4个合约
 
 ![alt text](image-11.png)
+
 LibraryContract1 => 0xb6E82f13D5E6e433a41CF39789061Bc61c70444c
 
 LibraryContract2 => 0xE16c692215F3001244947bd2452944e98CF2dB55
