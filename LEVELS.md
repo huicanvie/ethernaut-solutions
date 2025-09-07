@@ -19,3 +19,4 @@
 | 15| NaughtCoin      |[点此前往](levels/15-naughtCoin.md)
 | 16| Preservation    |[点此前往](levels/16-preservation.md)
 | 17| Recovery        |[点此前往](levels/17-recovery.md)
+| 18| MagicNumber     |[点此前往](levels/18-magicNumber.md)
