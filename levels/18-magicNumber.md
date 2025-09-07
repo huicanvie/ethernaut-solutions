@@ -36,7 +36,7 @@ contract MagicNum {
 ### 分析
 乍一看，觉得这个不是很简单吗？\
 三下五除二，很快就在remix上写了一个Solver合约。\
-![alt text](image-17.png)
+![alt text](image-17.png) \
 看到自己的效率这么神速，被自己的天才而感动的痛哭流涕。\
 迫不及待部署到sepolia测试网上，\
 根据题目要求调用`setSolver(address _solver)`, \
