@@ -21,3 +21,5 @@
 | 17| Recovery        |[点此前往](levels/17-recovery.md)
 | 18| MagicNumber     |[点此前往](levels/18-magicNumber.md)
 | 19| AlienCodex      |[点此前往](levels/19-alienCodex.md)
+| 20| Denial          |[点此前往](levels/20-denial.md)
+| 21| Shop            |[点此前往](levels/21-shop.md)
