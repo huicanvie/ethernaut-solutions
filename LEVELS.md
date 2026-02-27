@@ -24,3 +24,4 @@
 | 20| Denial          |[点此前往](levels/20-denial.md)
 | 21| Shop            |[点此前往](levels/21-shop.md)
 | 22| Dex             |[点此前往](levels/22-dex.md)
+| 23| Dex2            |[点此前往](levels/23-dex2.md)
